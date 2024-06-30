@@ -17,9 +17,9 @@ public class Subscribers {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long nID;
-    @Column(name = "subName")
+    private Long id;
+    @Column(name = "name")
     private String name;
-    @Column(name = "subEmail")
+    @Column(name = "email")
     private String email;
 }

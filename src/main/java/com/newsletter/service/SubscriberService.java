@@ -1,6 +1,5 @@
 package com.newsletter.service;
 
-
 import com.newsletter.model.Subscribers;
 import com.newsletter.repo.SubscriberRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +12,11 @@ public class SubscriberService {
     @Autowired
     SubscriberRepo subscriberRepo;
 
+    public Subscribers saveSubscriber(Subscribers subscribers){
+        return subscriberRepo.save(subscribers);
+    }
     public List<Subscribers> getAllSubscribers(){
         return subscriberRepo.findAll();
     }
-
-    public Subscribers addSubscribers(Subscribers subscribers){
-        return subscriberRepo.save(subscribers);
-    }
 }
+
