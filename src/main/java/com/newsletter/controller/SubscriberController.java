@@ -19,7 +19,7 @@ public class SubscriberController {
     @Autowired
     SubscriberService subscriberService;
 
-    @PostMapping("api/save")
+    @PostMapping("/save")
     public ResponseEntity<Subscribers> saveSubscriber(@RequestBody Subscribers subscribers){
         Subscribers saveSubscriber = subscriberRepo.save(subscribers);
         return new ResponseEntity<>(saveSubscriber, HttpStatus.CREATED);
